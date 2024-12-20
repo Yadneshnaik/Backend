@@ -28,10 +28,12 @@ try {
   const servicesRoutes = require('./routes/services');
   const contactsRoutes = require('./routes/contacts');;
   const aboutUsRoutes = require('./routes/aboutus');
+  const bookingRoutes = require('./routes/booking');
 
   app.use('/api/services', servicesRoutes);
   app.use('/api/contacts', contactsRoutes);
   app.use('/api/aboutus', aboutUsRoutes);
+  app.use('/api/bookings', bookingRoutes);
 } catch (error) {
   console.error('Error loading routes:', error.message);
   process.exit(1); // Exit process if routes fail
